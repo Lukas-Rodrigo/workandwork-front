@@ -7,10 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  constructor(private router: Router ) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.router.navigate(['home'])
   }
 
 }

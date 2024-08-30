@@ -25,6 +25,7 @@ import { NavComponent } from './components/nav/nav.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
+import { TecnicosListComponent } from './components/tecnico/tecnicos-list/tecnicos-list.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { HeaderComponent } from './components/header/header.component';
     AppComponent,
     NavComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    TecnicosListComponent
   ],
   imports: [
     BrowserModule,
