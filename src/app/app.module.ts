@@ -30,6 +30,7 @@ import { TecnicosListComponent } from './components/tecnico/tecnicos-list/tecnic
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 
 
 @NgModule({
@@ -68,7 +69,7 @@ import { HttpClientModule } from '@angular/common/http';
       progressBar: true
     })
   ],
-  providers: [],
+  providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
