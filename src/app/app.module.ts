@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
 // Imports para componentes do Angular Material
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -21,11 +20,16 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Adicionar esses imports
+
 import { NavComponent } from './components/nav/nav.component';
-import {MatDatepickerModule} from '@angular/material/datepicker';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TecnicosListComponent } from './components/tecnico/tecnicos-list/tecnicos-list.component';
+import { LoginComponent } from './components/login/login.component';
+import { ToastrModule } from 'ngx-toastr';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -34,7 +38,8 @@ import { TecnicosListComponent } from './components/tecnico/tecnicos-list/tecnic
     NavComponent,
     HomeComponent,
     HeaderComponent,
-    TecnicosListComponent
+    TecnicosListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -53,8 +58,15 @@ import { TecnicosListComponent } from './components/tecnico/tecnicos-list/tecnic
     MatIconModule,
     MatListModule,
     MatCardModule,
-    MatDatepickerModule
-    
+    MatDatepickerModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot({
+      timeOut:4000,
+      closeButton: true,
+      progressBar: true
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
